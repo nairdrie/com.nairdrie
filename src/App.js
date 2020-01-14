@@ -15,9 +15,21 @@ function App() {
         <h2>Computer Engineering Student, University of Guelph</h2>
         <div className="links">
 								<span>
-									<a target="_blank" href="https://ca.linkedin.com/in/nairdrie"><FontAwesomeIcon icon={faLinkedin} /></a>
-									<a target="_blank" href="https://github.com/nairdrie"><FontAwesomeIcon icon={faGithubSquare} /></a>
-									<a target="_blank" href="https://www.instagram.com/nick.airdrie/"><FontAwesomeIcon icon={faInstagram} /></a>
+									<a target="_blank" href="https://ca.linkedin.com/in/nairdrie">
+                    <div><FontAwesomeIcon icon={faLinkedin} /></div>
+                    <div className="linkglitch1"><FontAwesomeIcon icon={faLinkedin} /></div>
+                    <div className="linkglitch2"><FontAwesomeIcon icon={faLinkedin} /></div>
+                  </a>
+									<a target="_blank" href="https://github.com/nairdrie">
+                    <div><FontAwesomeIcon icon={faGithubSquare} /></div>
+                    <div className="linkglitch1"><FontAwesomeIcon icon={faGithubSquare} /></div>
+                    <div className="linkglitch2"><FontAwesomeIcon icon={faGithubSquare} /></div>
+                  </a>
+									<a target="_blank" href="https://www.instagram.com/nick.airdrie/">
+                    <div><FontAwesomeIcon icon={faInstagram} /></div>
+                    <div className="linkglitch1"><FontAwesomeIcon icon={faInstagram} /></div>
+                    <div className="linkglitch2"><FontAwesomeIcon icon={faInstagram} /></div>
+                  </a>
 								</span>
 							</div>
         <p className="bio">Hello world! Welcome to my portfolio. I am a fifth year Computer Engineering student studying at the University of Guelph. 

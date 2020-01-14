@@ -60,7 +60,7 @@
   }
   .links a{
     color: #ffffff;
-    margin: 0 7px;
+    margin: 0 20px;
     font-size: 1.1em;
   }
 
@@ -205,6 +205,88 @@
         }
     }
     @keyframes menuglitch2 {
+      0% {
+          -webkit-transform: translate(0);
+          transform: translate(0)
+      }
+      1% {
+          -webkit-transform: translate(2px, -2px);
+          transform: translate(2px, -2px)
+      }
+      2% {
+          -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px)
+      }
+      3% {
+          -webkit-transform: translate(-2px, -2px);
+          transform: translate(-2px, -2px)
+      }
+      4% {
+          -webkit-transform: translate(-2px, 2px);
+          transform: translate(-2px, 2px)
+      }
+      5% {
+          -webkit-transform: translate(0);
+          transform: translate(0)
+      }
+    }
+  }
+
+  .links a{
+    position:relative;
+    z-index: 1;
+    &:hover{
+      .linkglitch1 {
+        animation: linkglitch1 10s cubic-bezier(.25, .46, .45, .94);
+      }
+      .linkglitch2 {
+        animation: linkglitch2 10s cubic-bezier(.94, .45, .46, .25);
+      }
+    }
+
+
+    > div {
+      position:absolute;
+      left:0;
+      top:5px;
+      opacity: .8;
+    }
+    .linkglitch1 {
+      color: #f0f;
+      z-index: -2;
+      
+    }
+    .linkglitch2 {
+      color: #0ff;
+      z-index: -1;
+    }
+    @keyframes linkglitch1 {
+        0% {
+            -webkit-transform: translate(0);
+            transform: translate(0)
+        }
+        1% {
+            -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px)
+        }
+        2% {
+            -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px)
+        }
+        3% {
+            -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px)
+        }
+        4% {
+            -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px)
+        }
+        5% {
+            -webkit-transform: translate(0);
+            transform: translate(0)
+        }
+    }
+    @keyframes linkglitch2 {
       0% {
           -webkit-transform: translate(0);
           transform: translate(0)
