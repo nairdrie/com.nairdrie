@@ -152,8 +152,6 @@
       border-bottom:2px solid white;
     }
     &:hover{
-      border-top:2px solid white;
-      border-bottom:2px solid white;
       .menuglitch1 {
         animation: menuglitch1 10s cubic-bezier(.25, .46, .45, .94);
       }
@@ -249,10 +247,9 @@
 
 
     > div {
-      position:absolute;
-      left:0;
-      top:5px;
-      opacity: .8;
+      position: absolute;
+      left: -12px;
+      top: 0;
     }
     .linkglitch1 {
       color: #f0f;
@@ -348,6 +345,10 @@
   top:0;
   left:0;
   z-index:2;
+  opacity:0;
+  &.initialized {
+    opacity:1;
+  }
   &.hide{
     animation: hide 0.4s ease-out;
     animation-fill-mode: forwards;
@@ -399,8 +400,6 @@
         border-bottom:2px solid white;
       }
       &:hover{
-        border-top:2px solid white;
-        border-bottom:2px solid white;
         .menuglitch1 {
           animation: menuglitch1 10s cubic-bezier(.25, .46, .45, .94);
         }
@@ -494,8 +493,116 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  p{
+      font-size:0.7em;
+      font-weight:500;
+      max-width:calc(100% - 20px);
+      width:725px;
+  }
 }
 
+#Resume a{
+  border:2px solid white;
+  font-weight:bold;
+  color:white;
+  padding:10px 20px;
+  text-decoration:none;
+  font-size:0.7em;
+
+}
+
+#Contact > a{
+  border:2px solid white;
+  font-weight:bold;
+  color:white;
+  padding:10px 20px;
+  text-decoration:none;
+  font-size:0.7em;
+}
+
+#Contact .links a{
+  position:relative;
+  z-index: 1;
+  color: #ffffff;
+    margin: 0 20px;
+    font-size: 1.1em;
+  &:hover{
+    .linkglitch1 {
+      animation: linkglitch1 10s cubic-bezier(.25, .46, .45, .94);
+    }
+    .linkglitch2 {
+      animation: linkglitch2 10s cubic-bezier(.94, .45, .46, .25);
+    }
+  }
+
+
+  > div {
+    position: absolute;
+    left: -12px;
+    top: 0;
+  }
+  .linkglitch1 {
+    color: #f0f;
+    z-index: -2;
+    
+  }
+  .linkglitch2 {
+    color: #0ff;
+    z-index: -1;
+  }
+  @keyframes linkglitch1 {
+      0% {
+          -webkit-transform: translate(0);
+          transform: translate(0)
+      }
+      1% {
+          -webkit-transform: translate(-2px, 2px);
+          transform: translate(-2px, 2px)
+      }
+      2% {
+          -webkit-transform: translate(-2px, -2px);
+          transform: translate(-2px, -2px)
+      }
+      3% {
+          -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px)
+      }
+      4% {
+          -webkit-transform: translate(2px, -2px);
+          transform: translate(2px, -2px)
+      }
+      5% {
+          -webkit-transform: translate(0);
+          transform: translate(0)
+      }
+  }
+  @keyframes linkglitch2 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+    1% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px)
+    }
+    2% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px)
+    }
+    3% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px)
+    }
+    4% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px)
+    }
+    5% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+  }
+}
 
 
 

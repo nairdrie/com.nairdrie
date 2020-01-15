@@ -18,11 +18,11 @@ import Contact from "./Pages/Contact";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentPage: null };
+    this.state = { currentPage: null, activeMenuItem:0 };
   }
 
   handlePageChange = number => {
-    this.setState({ currentPage: number }); // set currentPage number, to reset it from the previous selected.
+    this.setState({ currentPage: number, activeMenuItem:number }); // set currentPage number, to reset it from the previous selected.
   };
 
   getPagesNumbers = () => {
@@ -39,17 +39,23 @@ class App extends React.Component {
     return [...pageNumbers];
   };
 
+  handleMenuClick = (clickedItemIndex) => {
+    this.setState({activeMenuItem:clickedItemIndex});
+    this.handlePageChange(clickedItemIndex);
+  }
+
   render() {
+
     const pagesNumbers = this.getPagesNumbers();
 
     return <div className="App">
-        <PersistentMenu currentPage={this.state.currentPage} />
+        <PersistentMenu currentPage={this.state.currentPage} activeMenuItem={this.state.activeMenuItem} onMenuClick={this.handleMenuClick}/>
         <PageDots currentPage={this.state.currentPage}  />
         <ReactPageScroller
           pageOnChange={this.handlePageChange}
           customPageNumber={this.state.currentPage}
         >
-          <Intro />
+          <Intro activeMenuItem={this.state.activeMenuItem} onMenuClick={this.handleMenuClick}/>
           <Experience />
           <Projects />
           <Resume />
