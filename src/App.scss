@@ -147,7 +147,7 @@
     transition: 0.3s;
     z-index:1;
     position:relative;
-    &:first-child{
+    &.active{
       border-top:2px solid white;
       border-bottom:2px solid white;
     }
@@ -160,6 +160,9 @@
       .menuglitch2 {
         animation: menuglitch2 10s cubic-bezier(.94, .45, .46, .25);
       }
+    }
+    &:focus{
+      outline:0;
     }
 
 
@@ -314,5 +317,185 @@
     }
   }
 }
+
+.pageDotsContainer {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30px;
+  z-index:2;
+
+  .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 12px auto;
+    &.active{
+      width: 16px;
+      height: 16px;
+      background: white;
+      margin:-3px auto;
+    }
+  }
+}
+
+.menuBar{
+  width:100%;
+  height:80px;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:2;
+  &.hide{
+    animation: hide 0.4s ease-out;
+    animation-fill-mode: forwards;
+  }
+  &.show{
+    animation: show 0.4s ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes hide {
+    0% {
+      transform:translate(0, 0);
+    }
+    to {
+      transform:translate(0, -80px);
+    }
+  }
+  @keyframes show {
+    0% {
+      transform:translate(0, -80px);
+    }
+    to {
+      transform:translate(0, 0);
+    }
+  }
+  .smallLogo{
+    height:60px;
+    position:absolute;
+    top:20px;
+    left:20px;
+  }
+  .menuContainer{
+    margin-top:40px;
+    button {
+      color: white;
+      background: none;
+      border: 0;
+      margin: 0 8px;
+      padding: 5px 0;
+      font-family: 'Raleway';
+      font-weight: bold;
+      cursor:pointer;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+      z-index:1;
+      position:relative;
+      &.active{
+        border-top:2px solid white;
+        border-bottom:2px solid white;
+      }
+      &:hover{
+        border-top:2px solid white;
+        border-bottom:2px solid white;
+        .menuglitch1 {
+          animation: menuglitch1 10s cubic-bezier(.25, .46, .45, .94);
+        }
+        .menuglitch2 {
+          animation: menuglitch2 10s cubic-bezier(.94, .45, .46, .25);
+        }
+      }
+      &:focus{
+        outline:0;
+      }
+  
+  
+      .menuglitch1,.menuglitch2 {
+        position:absolute;
+        left:0;
+        top:5px;
+        opacity: .8;
+      }
+      .menuglitch1 {
+        color: #f0f;
+        z-index: -2;
+        
+      }
+      .menuglitch2 {
+        color: #0ff;
+        z-index: -1;
+      }
+      @keyframes menuglitch1 {
+          0% {
+              -webkit-transform: translate(0);
+              transform: translate(0)
+          }
+          1% {
+              -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px)
+          }
+          2% {
+              -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px)
+          }
+          3% {
+              -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px)
+          }
+          4% {
+              -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px)
+          }
+          5% {
+              -webkit-transform: translate(0);
+              transform: translate(0)
+          }
+      }
+      @keyframes menuglitch2 {
+        0% {
+            -webkit-transform: translate(0);
+            transform: translate(0)
+        }
+        1% {
+            -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px)
+        }
+        2% {
+            -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px)
+        }
+        3% {
+            -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px)
+        }
+        4% {
+            -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px)
+        }
+        5% {
+            -webkit-transform: translate(0);
+            transform: translate(0)
+        }
+      }
+    }
+  }
+}
+
+#Experience, #Projects, #Resume, #Contact {
+  font-family: 'Raleway', sans-serif;
+  background-color: rgb(36, 36, 36);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
 
 

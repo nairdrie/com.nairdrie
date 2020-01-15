@@ -1,21 +1,16 @@
-import React from 'react';
-import './App.scss';
-
+import React from "react";
 import { Pager } from "react-bootstrap";
 
-import PersistentMenu from './Components/PersistentMenu';
-import PageDots from './Components/PageDots';
+import ReactPageScroller from "../../src";
+import FirstComponent from "./FirstComponent";
+import SecondComponent from "./SecondComponent";
+import ThirdComponent from "./ThirdComponent";
+import FourthComponent from "./FourthComponent";
+import FifthComponent from "./FifthComponent";
 
-import ReactPageScroller from "react-page-scroller";
-import Intro from './Pages/Intro';
-import Experience from "./Pages/Experience";
-import Projects from "./Pages/Projects";
-import Resume from "./Pages/Resume";
-import Contact from "./Pages/Contact";
+import "./index.css";
 
-
-
-class App extends React.Component {
+export default class FullPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { currentPage: null };
@@ -42,25 +37,22 @@ class App extends React.Component {
   render() {
     const pagesNumbers = this.getPagesNumbers();
 
-    return <div className="App">
-        <PersistentMenu currentPage={this.state.currentPage} />
-        <PageDots currentPage={this.state.currentPage}  />
+    return (
+      <React.Fragment>
         <ReactPageScroller
           pageOnChange={this.handlePageChange}
           customPageNumber={this.state.currentPage}
         >
-          <Intro />
-          <Experience />
-          <Projects />
-          <Resume />
-          <Contact />
+          <FirstComponent />
+          <SecondComponent />
+          <ThirdComponent />
+          <FourthComponent />
+          <FifthComponent />
         </ReactPageScroller>
-        {/*<Pager className="pagination-additional-class" bsSize="large">
+        <Pager className="pagination-additional-class" bsSize="large">
           {pagesNumbers}
         </Pager>
-        */}
-    </div>;
+      </React.Fragment>
+    );
   }
 }
-
-export default App;
