@@ -13,13 +13,19 @@ import Projects from "./Pages/Projects";
 import Resume from "./Pages/Resume";
 import Contact from "./Pages/Contact";
 
+import { FullPage, Slide } from 'react-full-page'
+
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { currentPage: null, activeMenuItem:0 };
+
+    this.fullPageRef = React.createRef();
   }
+
+
 
   handlePageChange = number => {
     this.setState({ currentPage: number, activeMenuItem:number }); // set currentPage number, to reset it from the previous selected.
@@ -42,7 +48,14 @@ class App extends React.Component {
   handleMenuClick = (clickedItemIndex) => {
     this.setState({activeMenuItem:clickedItemIndex});
     this.handlePageChange(clickedItemIndex);
+    this.fullPageRef.current.scrollToSlide(clickedItemIndex);
   }
+
+  scrollHandler = (status) => {
+    this.setState({currentPage:status.to, activeMenuItem:status.to});
+    
+  }
+
 
   render() {
 
@@ -51,7 +64,7 @@ class App extends React.Component {
     return <div className="App">
         <PersistentMenu currentPage={this.state.currentPage} activeMenuItem={this.state.activeMenuItem} onMenuClick={this.handleMenuClick}/>
         <PageDots currentPage={this.state.currentPage}  />
-        <ReactPageScroller
+        {/*<ReactPageScroller
           pageOnChange={this.handlePageChange}
           customPageNumber={this.state.currentPage}
         >
@@ -60,7 +73,24 @@ class App extends React.Component {
           <Projects />
           <Resume />
           <Contact />
-        </ReactPageScroller>
+        </ReactPageScroller>*/}
+        <FullPage beforeChange={this.scrollHandler} duration="1000" ref={this.fullPageRef}>
+          <Slide>
+            <Intro activeMenuItem={this.state.activeMenuItem} onMenuClick={this.handleMenuClick}/>
+          </Slide>
+          <Slide>
+            <Experience />
+          </Slide>
+          <Slide>
+            <Projects />
+          </Slide>
+          <Slide>
+            <Resume />
+          </Slide>
+          <Slide>
+            <Contact />
+          </Slide>
+        </FullPage>
         {/*<Pager className="pagination-additional-class" bsSize="large">
           {pagesNumbers}
         </Pager>

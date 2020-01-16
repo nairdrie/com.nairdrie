@@ -346,6 +346,13 @@
   left:0;
   z-index:2;
   opacity:0;
+  .background{
+    width: 100%;
+    height: 80px;
+    background: #242424;
+    position: absolute;
+    box-shadow: 0 24px 20px 0px #242424;
+  }
   &.initialized {
     opacity:1;
   }
@@ -604,5 +611,17 @@
   }
 }
 
+#Experience{
+  padding-top:115px;
 
+  @media only screen and (min-width: 1170px) {
+    .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+      text-align:left;
+    }
+    .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date {
+      text-align: right;
+    }
+  }
+
+}
 

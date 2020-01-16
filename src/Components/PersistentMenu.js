@@ -17,6 +17,7 @@ class PersistentMenu extends React.Component {
    }.bind(this),1000);  // wait 5 seconds, then reset to false
 
       return <div className={"menuBar " + (this.props.currentPage === 0 ? 'hide ' : 'show ') + (this.state.visible ? 'initialized' : '')}>
+                <div className="background"></div>
                 <img src={logo} className="smallLogo" alt="N" />
                 <div className="menuContainer">
                 <span>
