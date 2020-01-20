@@ -74,7 +74,7 @@ class App extends React.Component {
           <Resume />
           <Contact />
         </ReactPageScroller>*/}
-        <FullPage beforeChange={this.scrollHandler} duration="1000" ref={this.fullPageRef}>
+        <FullPage beforeChange={this.scrollHandler} duration={1000} ref={this.fullPageRef}>
           <Slide>
             <Intro activeMenuItem={this.state.activeMenuItem} onMenuClick={this.handleMenuClick}/>
           </Slide>

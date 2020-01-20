@@ -9,6 +9,7 @@ class Experience extends React.Component {
 
     render() {
       return <div id="Experience">
+        {/*
           <VerticalTimeline>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
@@ -101,6 +102,8 @@ class Experience extends React.Component {
     icon={<FontAwesomeIcon icon={faInstagram}  />}
   />
 </VerticalTimeline>
+        */}
+        <h1>Experience</h1>
       </div>;
     }
   }
