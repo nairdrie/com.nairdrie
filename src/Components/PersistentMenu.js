@@ -20,13 +20,13 @@ class PersistentMenu extends React.Component {
                 <div className="background"></div>
                 <img src={logo} className="smallLogo" alt="N" />
                 <div className="menuContainer">
-                <span>
-                                  <button className={(this.props.activeMenuItem  === 0 ? 'active' : '')}  onClick={() => this.menuClick(0)}>INTRO<div className="menuglitch1">INTRO</div><div className="menuglitch2">INTRO</div></button>
-                                  <button className={(this.props.activeMenuItem  === 1 ? 'active' : '')}  onClick={() => this.menuClick(1)}>EXPERIENCE<div className="menuglitch1">EXPERIENCE</div><div className="menuglitch2">EXPERIENCE</div></button>
-                                  <button className={(this.props.activeMenuItem  === 2 ? 'active' : '')}  onClick={() => this.menuClick(2)}>PROJECTS<div className="menuglitch1">PROJECTS</div><div className="menuglitch2">PROJECTS</div></button>
-                                  <button className={(this.props.activeMenuItem  === 3 ? 'active' : '')}  onClick={() => this.menuClick(3)}>RESUME<div className="menuglitch1">RESUME</div><div className="menuglitch2">RESUME</div></button>
-                                  <button className={(this.props.activeMenuItem  === 4 ? 'active' : '')}  onClick={() => this.menuClick(4)}>CONTACT<div className="menuglitch1">CONTACT</div><div className="menuglitch2">CONTACT</div></button>
-                              </span>
+                <ul id="myMenu">
+                                  <li data-menuanchor="intro" className={(this.props.currentPage  === 0 ? 'active' : '')}  ><a href="#intro" onClick={() => this.menuClick(0)}>INTRO<div className="menuglitch1">INTRO</div><div className="menuglitch2">INTRO</div></a></li>
+                                  <li data-menuanchor="experience" className={(this.props.currentPage  === 1 ? 'active' : '')}  ><a href="#experience"  onClick={() => this.menuClick(1)}>EXPERIENCE<div className="menuglitch1">EXPERIENCE</div><div className="menuglitch2">EXPERIENCE</div></a></li>
+                                  <li data-menuanchor="projects" className={(this.props.currentPage  === 2 ? 'active' : '')}  ><a href="#projects"  onClick={() => this.menuClick(2)}>PROJECTS<div className="menuglitch1">PROJECTS</div><div className="menuglitch2">PROJECTS</div></a></li>
+                                  <li data-menuanchor="resume" className={(this.props.currentPage  === 3 ? 'active' : '')}  ><a href="#resume"  onClick={() => this.menuClick(3)}>RESUME<div className="menuglitch1">RESUME</div><div className="menuglitch2">RESUME</div></a></li>
+                                  <li data-menuanchor="contact" className={(this.props.currentPage  === 4 ? 'active' : '')}   ><a href="#contact" onClick={() => this.menuClick(4)}>CONTACT<div className="menuglitch1">CONTACT</div><div className="menuglitch2">CONTACT</div></a></li>
+                              </ul>
                 </div>
           </div>;
     }

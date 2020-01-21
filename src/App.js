@@ -19,82 +19,25 @@ import ReactFullpage from '@fullpage/react-fullpage';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentPage: null, activeMenuItem:0 };
-
-    this.fullPageRef = React.createRef();
+    this.state = { currentPage: 0 };
   }
 
   
 
-  getPagesNumbers = () => {
-    const pageNumbers = [];
-
-    for (let i = 1; i <= 5; i++) {
-      pageNumbers.push(
-        <Pager.Item key={i} eventKey={i - 1} onSelect={this.handlePageChange}>
-          {i}
-        </Pager.Item>,
-      );
-    }
-
-    return [...pageNumbers];
-  };
 
   handleMenuClick = (clickedItemIndex) => {
-    this.setState({ currentPage: clickedItemIndex, activeMenuItem:clickedItemIndex }); 
+    this.setState({ currentPage: clickedItemIndex }); 
   }
 
-  scrollHandler = (status) => {
-    this.setState({currentPage:status.to, activeMenuItem:status.to});
-    
-  }
 
 
   render() {
 
-    const pagesNumbers = this.getPagesNumbers();
 
     return <div className="App">
-        <PersistentMenu currentPage={this.state.currentPage} activeMenuItem={this.state.activeMenuItem} onMenuClick={(index) => {this.handleMenuClick(index);fullpageapi.moveTo(['intro', 'experience', 'projects', 'resume', 'contact'][index], 0)}}/>
-        {/*<PageDots currentPage={this.state.currentPage}  />*/}
-
-        {/*<ReactPageScroller
-          pageOnChange={this.handlePageChange}
-          customPageNumber={this.state.currentPage}
-        >
-          <Intro activeMenuItem={this.state.activeMenuItem} onMenuClick={this.handleMenuClick}/>
-          <Experience />
-          <Projects />
-          <Resume />
-          <Contact />
-        </ReactPageScroller>*/}
-        {/*<FullPage beforeChange={this.scrollHandler} duration={1000} ref={this.fullPageRef}>
-          <Slide>
-            <Intro activeMenuItem={this.state.activeMenuItem} onMenuClick={this.handleMenuClick}/>
-          </Slide>
-          <Slide>
-            <Experience />
-          </Slide>
-          <Slide>
-            <Projects />
-          </Slide>
-          <Slide>
-            <Resume />
-          </Slide>
-          <Slide>
-            <Contact />
-          </Slide>
-        </FullPage>
-      */}
-        {/*<Pager className="pagination-additional-class" bsSize="large">
-          {pagesNumbers}
-        </Pager>
-        */}
+        <PersistentMenu currentPage={this.state.currentPage}  onMenuClick={(index) => {this.handleMenuClick(index);}}/>
          <ReactFullpage
           debug /* Debug logging */
-
-
-
           // fullpage options
           //licenseKey={'YOUR_KEY_HERE'} // Get one from https://alvarotrigo.com/fullPage/pricing/
           navigation
@@ -102,11 +45,15 @@ class App extends React.Component {
           //sectionSelector={SECTION_SEL}
           //onLeave={this.onLeave.bind(this)}
           //sectionsColor={this.state.sectionsColor}
-
+          menu='#myMenu'
+          onLeave={(origin, destination, direction) => {
+            this.setState({ currentPage: destination.index }); 
+          }}
+          scrollOverflow={true}
           render={({ state, fullpageApi }) => (
             <ReactFullpage.Wrapper>
               <div className="section">
-                <Intro activeMenuItem={this.state.activeMenuItem} onMenuClick={(index) => {this.handleMenuClick(index);fullpageApi.moveTo(['intro', 'experience', 'projects', 'resume', 'contact'][index], 0)}}/>
+                <Intro currentPage={this.state.currentPage} onMenuClick={(index) => {this.handleMenuClick(index);fullpageApi.moveTo(['intro', 'experience', 'projects', 'resume', 'contact'][index], 0)}}/>
               </div>
               <div className="section">
                 <Experience />
@@ -120,11 +67,6 @@ class App extends React.Component {
               <div className="section">
                 <Contact />
               </div>
-              
-              
-              
-              
-              
             </ReactFullpage.Wrapper>
           )}
         />
