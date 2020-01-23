@@ -132,9 +132,6 @@ class Projects extends React.Component {
             {projectList.map(p => (<li>
               <img src={p.imgSrc} className="projectCover"/>
               <div className="details">
-                <div className="title">
-                  {p.title}
-                </div>
                 <div className="info">
                   {p.info}
                 </div>
