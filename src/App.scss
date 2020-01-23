@@ -642,12 +642,60 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-template-rows: repeat(4, 280.5px);
+    grid-template-rows: repeat(6, 280.5px);
     grid-gap: 1rem;
     grid-auto-flow: dense;
     > li {
       background:grey;
       list-style-type: none;
+      border-radius: 16px;
+      position:relative;
+      img{
+        width:100%;
+        position:absolute;
+        height:100%;
+        left:0;
+        top:0;
+        border-radius:16px;
+      }
+      .details{
+        position:absolute;
+        width:100%;
+        height:100%;
+        box-sizing:border-box;
+        opacity:0;
+        z-index:1;
+        background: rgba(0,0,0,0.5);
+        border-radius: 16px;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.4s;
+        padding:10px;
+        &:hover{
+          opacity:1;
+          transition: opacity 0.4s;
+        }
+        .title{
+          font-weight:700;
+          font-size:0.8em;
+        }
+        .info{
+          font-size:0.7em;
+          margin: 8px 0 28px 0;
+        }
+        a{
+          font-weight: 500;
+          border: 2px solid white;
+          border-radius: 40px;
+          font-size: 0.6em;
+          text-decoration: none;
+          color: white;
+          padding: 3px 10px;
+        }
+      }
     }
     > li > figure > img {
       width: 100%;
