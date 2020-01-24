@@ -496,7 +496,7 @@
   }
 }
 
-#Experience, #Projects, #Resume, #Contact {
+#Skills, #Experience, #Projects, #Resume, #Contact {
   font-family: 'Raleway', sans-serif;
   background-color: rgb(36, 36, 36);
   min-height: 100vh;
@@ -631,6 +631,18 @@
     }
   }
 
+  svg.fa-graduation-cap{
+    margin-left:-15px;
+  }
+
+  svg.fa-js-square{
+    margin-left:-11px;
+  }
+
+  svg.fa-unity{
+    margin-left:-14px;
+  }
+
 }
 
 #Projects{
@@ -675,7 +687,7 @@
         align-items: center;
         justify-content: center;
         transition: opacity 0.4s;
-        padding:10px;
+        padding:20px;
         &:hover{
           opacity:1;
           transition: opacity 0.4s;

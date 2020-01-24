@@ -1,26 +1,27 @@
 import React from 'react';
-import imgSrc1 from '../res/projects/rsd.png';
-import imgSrc2 from '../res/projects/ksleigh.png';
-import imgSrc3 from '../res/projects/ked.png';
-import imgSrc4 from '../res/projects/algai.png';
-import imgSrc5 from '../res/projects/erebus.png';
-import imgSrc6 from '../res/projects/guardian.png';
-import imgSrc7 from '../res/projects/plunge.png';
-import imgSrc8 from '../res/projects/dodgebowl.png';
-import imgSrc9 from '../res/projects/starsweeper.png';
-import imgSrc10 from '../res/projects/retrosudoku.png';
-import imgSrc11 from '../res/projects/wordsearch.png';
-import imgSrc12 from '../res/projects/tankgallery.png';
-import imgSrc13 from '../res/projects/eracer.png';
-import imgSrc14 from '../res/projects/armada.png';
-import imgSrc15 from '../res/projects/bpl.png';
-import imgSrc16 from '../res/projects/liveelectric.png';
-import imgSrc17 from '../res/projects/cfht.png';
-import imgSrc18 from '../res/projects/jtrump.png';
+import rsd from '../res/projects/rsd.png';
+import ksleigh from '../res/projects/ksleigh.png';
+import ked from '../res/projects/ked.png';
+import algai from '../res/projects/algai.png';
+import erebus from '../res/projects/erebus.png';
+import guardian from '../res/projects/guardian.png';
+import plunge from '../res/projects/plunge.png';
+import dodgebowl from '../res/projects/dodgebowl.png';
+import starsweeper from '../res/projects/starsweeper.png';
+import retrosudoku from '../res/projects/retrosudoku.png';
+import wordsearch from '../res/projects/wordsearch.png';
+import tankgallery from '../res/projects/tankgallery.png';
+import eracer from '../res/projects/eracer.png';
+import armada from '../res/projects/armada.png';
+import bpl from '../res/projects/bpl.png';
+import liveelectric from '../res/projects/liveelectric.png';
+import cfht from '../res/projects/cfht.png';
 
 //new
-import imgSrc19 from '../res/projects/pats.png';
-//import imgSrc20 from '../res/projects/fighter.png';
+import pats from '../res/projects/pats.png';
+import oliable from '../res/projects/oliable.png';
+import bluechimp from '../res/projects/bluechimp.png';
+import secretsanta from '../res/projects/secretsanta.png';
 
 class Projects extends React.Component {
 
@@ -29,99 +30,109 @@ class Projects extends React.Component {
       var projectList = 
         [
           {
-            imgSrc:imgSrc19,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:pats,
+            title:"",
+            info:"A high-accuracy tracking system for patients with Alzheimer's for use in care centres. Front-end developed in React."
           },
           {
-            imgSrc:imgSrc2,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:oliable,
+            title:"",
+            info:"An e-commerce startup I recently co-created. Oliable has multiple online stores currently being worked on."
           },
           {
-            imgSrc:imgSrc3,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:ksleigh,
+            title:"",
+            info:"Kenna Sleigh Toss is a browser game I co-created while working at Kenna for employees to play at one of our events."
           },
           {
-            imgSrc:imgSrc1,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:secretsanta,
+            title:"",
+            info:"A simple web app with a connection to Google Sheets API as a backend for determining and distributing Secret Santa info for my friends."
           },
           {
-            imgSrc:imgSrc4,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:bluechimp,
+            title:"",
+            info:"A game studio startup I recently co-created. Currently one title is in the works built in Unity."
           },
           {
-            imgSrc:imgSrc5,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:ked,
+            title:"",
+            info:"An internal web application I developed for Kenna at their hackathon. Won first place in the hackathon for the project."
           },
           {
-            imgSrc:imgSrc6,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:rsd,
+            title:"",
+            info:"RSD Mobile is a business solutions Android app I co-designed and developed for Rapid Sewer Data."
           },
           {
-            imgSrc:imgSrc7,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:algai,
+            title:"",
+            info:"Alg.AI is a prototype for a python based machine learning algorithm which would help determine harmful algae bloom precense in major bodies of water in advance."
           },
           {
-            imgSrc:imgSrc8,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:erebus,
+            title:"",
+            info:"Erebus is a 2D platformer mobile game I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc9,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:guardian,
+            title:"",
+            info:"Guardian is a casual ball bounce mobile game I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc10,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:plunge,
+            title:"",
+            info:"Plunge is a 2D adventure mobile game I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc11,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:dodgebowl,
+            title:"",
+            info:"Dodgebowl is a 3D runner mobile game I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc12,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:starsweeper,
+            title:"",
+            info:"Starsweeper is a Minesweeper-like mobile game I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc13,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:retrosudoku,
+            title:"",
+            info:"Retro Sudoku is a simple Sudoku mobile app I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc14,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:wordsearch,
+            title:"",
+            info:"Santa's Word Search is a festive word search mobile app I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc15,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:tankgallery,
+            title:"",
+            info:"Tank Gallery is a 2D arcade style mobile game I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc16,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:eracer,
+            title:"",
+            info:"E-racer is a 2D driving mobile game I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc17,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:armada,
+            title:"",
+            info:"Armada Bomber is a 2D arcade style mobile game I developed while working at Adknown."
           },
           {
-            imgSrc:imgSrc18,
-            title:"RSD Mobile",
-            info:"Testing testing 123."
+            imgSrc:bpl,
+            title:"",
+            info:"I played a large part in developing the front-end of Barrie Public Library's website."
+          },
+          {
+            imgSrc:liveelectric,
+            title:"",
+            info:"I played a large part in developing the front-end of Live Electric's website, which is an electrical company located in Guelph."
+          },
+          {
+            imgSrc:cfht,
+            title:"",
+            info:"I played a large part in developing CFHT's website, which is a healthcare center in Orillia."
           }
         ];
 

@@ -48,10 +48,11 @@ class Intro extends React.Component {
       <div className="menu">
                               <span>
                                   <button className={(this.props.currentPage === 0 ? 'active' : '')}  onClick={() => this.menuClick(0)}>INTRO<div className="menuglitch1">INTRO</div><div className="menuglitch2">INTRO</div></button>
-                                  <button className={(this.props.currentPage  === 1 ? 'active' : '')}  onClick={() => this.menuClick(1)}>EXPERIENCE<div className="menuglitch1">EXPERIENCE</div><div className="menuglitch2">EXPERIENCE</div></button>
-                                  <button className={(this.props.currentPage  === 2 ? 'active' : '')}  onClick={() => this.menuClick(2)}>PROJECTS<div className="menuglitch1">PROJECTS</div><div className="menuglitch2">PROJECTS</div></button>
-                                  <button className={(this.props.currentPage  === 3 ? 'active' : '')}  onClick={() => this.menuClick(3)}>RESUME<div className="menuglitch1">RESUME</div><div className="menuglitch2">RESUME</div></button>
-                                  <button className={(this.props.currentPage  === 4 ? 'active' : '')}  onClick={() => this.menuClick(4)}>CONTACT<div className="menuglitch1">CONTACT</div><div className="menuglitch2">CONTACT</div></button>
+                                  <button className={(this.props.currentPage === 1 ? 'active' : '')}  onClick={() => this.menuClick(1)}>SKILLS<div className="menuglitch1">SKILLS</div><div className="menuglitch2">SKILLS</div></button>
+                                  <button className={(this.props.currentPage === 2 ? 'active' : '')}  onClick={() => this.menuClick(2)}>EXPERIENCE<div className="menuglitch1">EXPERIENCE</div><div className="menuglitch2">EXPERIENCE</div></button>
+                                  <button className={(this.props.currentPage === 3 ? 'active' : '')}  onClick={() => this.menuClick(3)}>PROJECTS<div className="menuglitch1">PROJECTS</div><div className="menuglitch2">PROJECTS</div></button>
+                                  <button className={(this.props.currentPage === 4 ? 'active' : '')}  onClick={() => this.menuClick(4)}>RESUME<div className="menuglitch1">RESUME</div><div className="menuglitch2">RESUME</div></button>
+                                  <button className={(this.props.currentPage === 5 ? 'active' : '')}  onClick={() => this.menuClick(5)}>CONTACT<div className="menuglitch1">CONTACT</div><div className="menuglitch2">CONTACT</div></button>
                               </span>
                           </div>
     </header>;

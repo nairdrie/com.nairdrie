@@ -9,6 +9,7 @@ import PageDots from './Components/PageDots';
 
 import ReactPageScroller from "react-page-scroller";
 import Intro from './Pages/Intro';
+import Skills from './Pages/Skills';
 import Experience from "./Pages/Experience";
 import Projects from "./Pages/Projects";
 import Resume from "./Pages/Resume";
@@ -41,7 +42,7 @@ class App extends React.Component {
           // fullpage options
           //licenseKey={'YOUR_KEY_HERE'} // Get one from https://alvarotrigo.com/fullPage/pricing/
           navigation
-          anchors={['intro', 'experience', 'projects', 'resume', 'contact']}
+          anchors={['intro', 'skills', 'experience', 'projects', 'resume', 'contact']}
           //sectionSelector={SECTION_SEL}
           //onLeave={this.onLeave.bind(this)}
           //sectionsColor={this.state.sectionsColor}
@@ -53,7 +54,10 @@ class App extends React.Component {
           render={({ state, fullpageApi }) => (
             <ReactFullpage.Wrapper>
               <div className="section">
-                <Intro currentPage={this.state.currentPage} onMenuClick={(index) => {this.handleMenuClick(index);fullpageApi.moveTo(['intro', 'experience', 'projects', 'resume', 'contact'][index], 0)}}/>
+                <Intro currentPage={this.state.currentPage} onMenuClick={(index) => {this.handleMenuClick(index);fullpageApi.moveTo(['intro', 'skills', 'experience', 'projects', 'resume', 'contact'][index], 0)}}/>
+              </div>
+              <div className="section">
+                <Skills />
               </div>
               <div className="section">
                 <Experience />

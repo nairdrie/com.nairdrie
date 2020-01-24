@@ -40,8 +40,8 @@ class Experience extends React.Component {
     <h3 className="vertical-timeline-element-title">Web Application Developer</h3>
     <h4 className="vertical-timeline-element-subtitle">Kenna Technology Solutions Inc.</h4>
     <p>
-      Put some details here.
-    </p>
+      Worked on a variety of new features and bug fixes across Kenna’s various applications in React, SQL, Sass, jQuery &amp; more.
+      </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
@@ -54,7 +54,7 @@ class Experience extends React.Component {
     <h3 className="vertical-timeline-element-title">Full-Stack Mobile Developer</h3>
     <h4 className="vertical-timeline-element-subtitle">Rapid Sewer Data</h4>
     <p>
-      Put some details here.
+    Co-designed and developed a cross platform business solutions app which helped Rapid Sewer Data acquire clients from cities across Canada using Ionic Framework.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
@@ -68,7 +68,7 @@ class Experience extends React.Component {
     <h3 className="vertical-timeline-element-title">Unity Game Developer</h3>
     <h4 className="vertical-timeline-element-subtitle">Adknown Inc.</h4>
     <p>
-    Put some details here.
+    Developed 12 iOS, Android and Windows store games in Unity using C# which collected over 100,000 downloads total.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
@@ -82,7 +82,7 @@ class Experience extends React.Component {
     <h3 className="vertical-timeline-element-title">Front-End Web Developer</h3>
     <h4 className="vertical-timeline-element-subtitle">Sandbox Software Solutions</h4>
     <p>
-    Put some details here.
+    Developed many websites/webpages for clients using HTML, CSS and JavaScript, as well as icons and other user interface items for web using Adobe Illustrator.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
@@ -96,7 +96,7 @@ class Experience extends React.Component {
     <h3 className="vertical-timeline-element-title">Began Studies</h3>
     <h4 className="vertical-timeline-element-subtitle">University of Guelph</h4>
     <p>
-    Put some details here.
+    Entered with a $2000 entry scholarship for maintaining a high average in high school. Maintained over 90% average in first-year software related courses.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement
@@ -110,24 +110,7 @@ class Experience extends React.Component {
     <h3 className="vertical-timeline-element-title">Graduated</h3>
     <h4 className="vertical-timeline-element-subtitle">Humberview Secondary School</h4>
     <p>
-    Put some details here.
-    </p>
-  </VerticalTimelineElement>
-  
-  <VerticalTimelineElement
-className="vertical-timeline-element--work"
-contentStyle={{ background: 'rgb(51, 89, 155)', color: '#fff' }}
-contentArrowStyle={{ borderRight: '7px solid  rgb(51, 89, 155)' }}
-date="June 4, 1997"
-
-    iconStyle={{ background: 'rgb(51, 89, 155)', color: '#fff' }}
-    icon={<FontAwesomeIcon icon={faBirthdayCake}  />}
-    
-  >
-    <h3 className="vertical-timeline-element-title">Born</h3>
-    <h4 className="vertical-timeline-element-subtitle">Mississauga, Ontario</h4>
-    <p>
-    Put some details here.
+    Maintained > 85% average across all courses, and > 90% average across STEM related courses.
     </p>
   </VerticalTimelineElement>
 </VerticalTimeline>
