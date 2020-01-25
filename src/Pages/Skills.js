@@ -10,7 +10,7 @@ class Contact extends React.Component {
 
     render() {
       return <div id="Skills">
-           <p>Skills here</p>
+           <p>Throughout my experience at university, co-op jobs, and personal work/projects, I have been able to develop a variety of software related skills. I am most skilled in web development related technologies, as I have several years of experience in the field including one year of professional experience working in the field.</p>
       </div>;
     }
   }

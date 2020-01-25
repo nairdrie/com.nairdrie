@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import ContactForm from '../Components/ContactForm'
 
 class Contact extends React.Component {
 
@@ -10,10 +11,7 @@ class Contact extends React.Component {
 
     render() {
       return <div id="Contact">
-           <p>email me</p>
-            <a href="mailto:nick.airdrie@gmail.com">nick.airdrie@gmail.com</a>
-            <p>call me</p>
-            <a href="tel:1-416-985-8201">416.985.8201</a>
+           <ContactForm />
             <p>or connect with me on LinkedIn, GitHub and Instagram.</p>
             <div className="links">
             <span>
