@@ -11,6 +11,7 @@ class Contact extends React.Component {
 
     render() {
       return <div id="Contact">
+            <p>Want to get in touch? Send me a message here:</p>
            <ContactForm />
             <p>or connect with me on LinkedIn, GitHub and Instagram.</p>
             <div className="links">
