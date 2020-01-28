@@ -779,3 +779,57 @@
 #fp-nav ul li a span {
   background:white !important;
 }
+
+#Skills{
+  $red : rgb(51, 89, 155);
+  $redAL : rgb(103, 141, 201);
+  $dark :  #3d3d3d;
+  @mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+  }
+  .wrap {
+    max-width: calc(100% - 20px);
+    width: 725px;
+    margin: 0 auto;
+  }
+  .bar {
+    background:$red;
+    width: 0;
+    margin: .25em 0;
+    color: #fff;
+    position: relative;
+     transition:width 2s, background .2s;
+    -webkit-transform: translate3d(0,0,0);
+     clear: both;
+     &:nth-of-type(2n) {
+       background:lighten($red , 10% );
+     }
+     .label {
+     font-size: .5em;
+     padding: 1em;
+     background: $dark;
+     width: 8em;
+     display: inline-block;
+     position: relative;
+     z-index: 2;
+     font-weight: bold;
+      &.light {
+       background:lighten($dark , 10% );
+     }
+ 
+ }
+  }
+  .count {
+   position: absolute;
+   right: .25em;
+   top: .6em;
+    padding: .15em; 
+   font-size: .5em;
+   font-weight: bold;
+  }
+
+}

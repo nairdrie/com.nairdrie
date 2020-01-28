@@ -44,7 +44,7 @@ class App extends React.Component {
           navigation
           anchors={['intro', 'skills', 'experience', 'projects', 'resume', 'contact']}
           //sectionSelector={SECTION_SEL}
-          //onLeave={this.onLeave.bind(this)}
+          //onLeave={this.onLeave.bind(this)}65
           //sectionsColor={this.state.sectionsColor}
           menu='#myMenu'
           onLeave={(origin, destination, direction) => {
@@ -57,7 +57,7 @@ class App extends React.Component {
                 <Intro currentPage={this.state.currentPage} onMenuClick={(index) => {this.handleMenuClick(index);fullpageApi.moveTo(['intro', 'skills', 'experience', 'projects', 'resume', 'contact'][index], 0)}}/>
               </div>
               <div className="section">
-                <Skills />
+                <Skills currentPage={this.state.currentPage}/>
               </div>
               <div className="section">
                 <Experience />
