@@ -791,6 +791,14 @@
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
   }
+  .skill{
+    border-radius:20px;
+    background:$red;
+    color:white;
+    &:nth-of-type(2n) {
+      background:lighten($red , 10% );
+    }
+  }
   .wrap {
     max-width: calc(100% - 20px);
     width: 725px;
@@ -805,31 +813,40 @@
      transition:width 2s, background .2s;
     -webkit-transform: translate3d(0,0,0);
      clear: both;
+    height:42px;
+    border-radius:50px;
      &:nth-of-type(2n) {
        background:lighten($red , 10% );
      }
      .label {
      font-size: .5em;
-     padding: 1em;
      background: $dark;
      width: 8em;
      display: inline-block;
-     position: relative;
+     position: absolute;
+     height:100%;
+     left: -1px;
      z-index: 2;
      font-weight: bold;
+     box-sizing:border-box;
+     line-height:42px;
+     border-top-left-radius: 50px;
+     border-bottom-left-radius: 50px;
       &.light {
-       background:lighten($dark , 10% );
+       background:#545454;
      }
  
  }
   }
   .count {
-   position: absolute;
-   right: .25em;
-   top: .6em;
-    padding: .15em; 
-   font-size: .5em;
-   font-weight: bold;
+    position: absolute;
+    right: 0.55em;
+    /* top: .6em; */
+    /* padding: .15em; */
+    font-size: .5em;
+    font-weight: bold;
+    height: 100%;
+    line-height: 42px;
   }
 
 }
