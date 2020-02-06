@@ -106,7 +106,6 @@ class Contact extends React.Component {
 
     render() {
       return <div id="Skills">
-        <p>Click a skill to learn more.</p>
         <div class="wrap">
           <div class="holder">
             <div class="bar cf" data-percent="90%"><span class="label">Javascript</span></div>
@@ -122,7 +121,7 @@ class Contact extends React.Component {
             <div class="bar cf" data-percent="70%"><span class="label">Java</span></div>
           </div>
         </div>
-        <p>Other Skills<br/> <span className="skill">Ionic</span><span className="skill">Python</span><span className="skill">Android Studio</span><span className="skill">Xcode</span><span className="skill">Blender</span><span className="skill">Adobe Illustrator</span></p>
+        <p><div className="other-skills-heading">Other Skills</div> <span className="skill">Ionic</span><span className="skill">Python</span><span className="skill">Android Studio</span><span className="skill">Xcode</span><span className="skill">Blender</span><span className="skill">Adobe Illustrator</span></p>
       </div>;
     }
   }

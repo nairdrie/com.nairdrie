@@ -791,13 +791,20 @@
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
   }
+  .other-skills-heading{
+    padding-bottom:10px;
+  }
   .skill{
-    border-radius:20px;
     background:$red;
     color:white;
     &:nth-of-type(2n) {
       background:lighten($red , 10% );
     }
+    border-radius: 20px;
+    font-size: .7em;
+    margin: 4px;
+    font-weight: bold;
+    padding: 5px 10px;
   }
   .wrap {
     max-width: calc(100% - 20px);
@@ -813,7 +820,7 @@
      transition:width 2s, background .2s;
     -webkit-transform: translate3d(0,0,0);
      clear: both;
-    height:42px;
+    height:36px;
     border-radius:50px;
      &:nth-of-type(2n) {
        background:lighten($red , 10% );
@@ -829,7 +836,7 @@
      z-index: 2;
      font-weight: bold;
      box-sizing:border-box;
-     line-height:42px;
+     line-height:36px;
      border-top-left-radius: 50px;
      border-bottom-left-radius: 50px;
       &.light {
@@ -846,7 +853,11 @@
     font-size: .5em;
     font-weight: bold;
     height: 100%;
-    line-height: 42px;
+    line-height: 36px;
   }
 
+}
+
+.heart{
+  font-size:0.6em !important;
 }

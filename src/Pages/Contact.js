@@ -5,6 +5,8 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import ContactForm from '../Components/ContactForm'
 
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+
 class Contact extends React.Component {
 
 
@@ -33,7 +35,7 @@ class Contact extends React.Component {
                 </a>
             </span>
         </div>
-          <p>&#10084;</p>
+        <p className="heart"><FontAwesomeIcon icon={faHeart}  /></p>
       </div>;
     }
   }
