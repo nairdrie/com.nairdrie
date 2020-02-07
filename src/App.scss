@@ -147,6 +147,19 @@ body{
     }
   }
 
+  @media (max-width:$mobile){
+    padding:20px;
+    .menu{
+      display:none;
+    }
+    .App-logo{
+      display:none;
+    }
+    .bio{
+      font-size: 1em !important;
+    }
+  }
+
   .menu button {
     color: white;
     background: none;
@@ -392,6 +405,16 @@ body{
     }
     to {
       transform:translate(0, 0);
+    }
+  }
+  @media(max-width:$mobile) {
+    opacity:1;
+    transform:translate(0, 0);
+    &.hide{
+      animation: none;
+    }
+    &.show{
+      animation: none;
     }
   }
   .smallLogo{
@@ -644,6 +667,7 @@ body{
     }
     h2{
       font-size:0.93em;
+      margin-bottom:14px;
     }
     .links a{
       font-size:2em;
