@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from '../res/logo-color.svg';
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class PersistentMenu extends React.Component {
   constructor(props) {
@@ -18,6 +20,12 @@ class PersistentMenu extends React.Component {
 
       return <div className={"menuBar " + (this.props.currentPage === 0 ? 'hide ' : 'show ') + (this.state.visible ? 'initialized' : '')}>
                 <div className="background"></div>
+                <div className="mobile-menu-button">
+                  <FontAwesomeIcon icon={faBars}  />
+                </div>
+                <div className="mobile-menu">
+
+                </div>
                 <img src={logo} className="smallLogo" alt="N" />
                 <div className="menuContainer">
                 <ul id="myMenu">

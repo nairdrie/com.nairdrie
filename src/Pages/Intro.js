@@ -22,8 +22,8 @@ class Intro extends React.Component {
     render() {
       return <header id="Intro" className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <h1>Nick Airdrie<div className="glitch1">Nick Airdrie</div><div className="glitch2">Nick Airdrie</div></h1>
-      <h2>Computer Engineering Student, University of Guelph</h2>
+      <h1>Nick <br className="mobile-only"/>Airdrie<div className="glitch1">Nick <br className="mobile-only"/>Airdrie</div><div className="glitch2">Nick <br className="mobile-only"/>Airdrie</div></h1>
+      <h2>Computer Engineering Student<span className="desktop-only">, </span><br className="mobile-only"/>University of Guelph</h2>
       <div className="links">
             <span>
                  <a target="_blank" rel="noopener noreferrer" href="https://ca.linkedin.com/in/nairdrie">
