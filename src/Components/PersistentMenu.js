@@ -1,12 +1,19 @@
 import React from 'react';
 import logo from '../res/logo-color.svg';
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { slide as Menu } from 'react-burger-menu'
 
 class PersistentMenu extends React.Component {
+
   constructor(props) {
     super(props);
-    this.state = { visible: false, clickedPage:0 };
+    this.state = { menuOpen:false, visible: false, clickedPage:0 };
+  }
+
+  closeMenu () {
+    console.log("test");
+    this.setState({menuOpen: false})
   }
 
   menuClick(item) {
@@ -18,15 +25,24 @@ class PersistentMenu extends React.Component {
         this.setState({visible:true});
    }.bind(this),1000);  // wait 5 seconds, then reset to false
 
+   let pageNames = ["Intro", "Skills", "Experience", "Projects", "Resume", "Contact"];
+  
+
       return <div className={"menuBar " + (this.props.currentPage === 0 ? 'hide ' : 'show ') + (this.state.visible ? 'initialized' : '')}>
                 <div className="background"></div>
                 <div className="mobile-menu-button">
-                  <FontAwesomeIcon icon={faBars}  />
+                    <FontAwesomeIcon icon={faBars}  /> <h3>{pageNames[this.props.currentPage]}</h3>
                 </div>
-                <div className="mobile-menu">
-
-                </div>
-                <img src={logo} className="smallLogo" alt="N" />
+                <Menu isOpen={ this.state.menuOpen }>
+                    <div className="close-menu"><FontAwesomeIcon icon={faTimes}  onClick={() => this.closeMenu()} /></div>
+                      <a id="intro" className={(this.props.currentPage  === 0 ? 'active menu-item' : 'menu-item')} href="#intro" onClick={() => this.menuClick(0)}>Intro</a>
+                      <a id="skills" className={(this.props.currentPage  === 1 ? 'active menu-item' : 'menu-item')} href="#skills" onClick={() => this.menuClick(1)}>Skills</a>
+                      <a id="experience" className={(this.props.currentPage  === 2 ? 'active menu-item' : 'menu-item')} href="#experience" onClick={() => this.menuClick(2)}>Experience</a>
+                      <a id="projects" className={(this.props.currentPage  === 3 ? 'active menu-item' : 'menu-item')} href="#projects" onClick={() => this.menuClick(3)}>Projects</a>
+                      <a id="resume" className={(this.props.currentPage  === 4 ? 'active menu-item' : 'menu-item')} href="#resume" onClick={() => this.menuClick(4)}>Resume</a>
+                      <a id="contact" className={(this.props.currentPage  === 5 ? 'active menu-item' : 'menu-item')} href="#contact" onClick={() => this.menuClick(5)}>Contact</a>
+                    </Menu>
+                <a onClick={() => this.menuClick(0)} href="#intro"><img src={logo} className="smallLogo" alt="N" /></a>
                 <div className="menuContainer">
                 <ul id="myMenu">
                                   <li data-menuanchor="intro" className={(this.props.currentPage  === 0 ? 'active' : '')}  ><a href="#intro" onClick={() => this.menuClick(0)}>INTRO<div className="menuglitch1">INTRO</div><div className="menuglitch2">INTRO</div></a></li>

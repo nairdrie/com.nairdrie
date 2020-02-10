@@ -386,10 +386,24 @@ body{
   &.hide{
     animation: hide 0.4s ease-out;
     animation-fill-mode: forwards;
+
+    @media(max-width:$mobile) {
+      .smallLogo{
+        animation: gobig 0.3s ease-out;
+        animation-fill-mode: forwards;
+      }
+    }
   }
   &.show{
     animation: show 0.4s ease-out;
     animation-fill-mode: forwards;
+
+    @media(max-width:$mobile) {
+      .smallLogo{
+        animation: gosmall 0.3s ease-out;
+        animation-fill-mode: forwards;
+      }
+    }
   }
   @keyframes hide {
     0% {
@@ -407,6 +421,28 @@ body{
       transform:translate(0, 0);
     }
   }
+
+  @keyframes gobig {
+    0% {
+      top:20px;
+      height:60px;
+    }
+    to {
+      top:60px;
+      height:170px;
+    }
+  }
+  @keyframes gosmall {
+    0% {
+      top:60px;
+      height:170px;
+    }
+    to {
+      top:20px;
+      height:60px;
+    }
+  }
+
   @media(max-width:$mobile) {
     opacity:1;
     transform:translate(0, 0);
@@ -436,6 +472,13 @@ body{
     color: white;
     @media (max-width: $mobile) { 
       display:block;
+     }
+     h3{
+      font-size: 0.5em;
+      display: inline-block;
+      position: relative;
+      top: -6px;
+      margin: 0;
      }
   }
   .menuContainer{
@@ -568,6 +611,12 @@ body{
   }
   @media(max-width:$mobile) {
     padding:20px;
+    p{
+      font-size:1em;
+    }
+    a{
+      font-size:1em;
+    }
   }
 }
 
@@ -579,6 +628,9 @@ body{
   text-decoration:none;
   font-size:0.7em;
   border-radius: 70px;
+  @media(max-width:$mobile) {
+      font-size:1em;
+  }
 
 }
 #Contact form {
@@ -637,6 +689,28 @@ body{
       font-family:inherit;
     }
   }
+  @media (max-width:$mobile){
+    input, textarea{
+      font-size:1em;
+      margin:4px 0 !important;
+    }
+    textarea{
+      margin: 0 !important;
+    }
+    .row{
+      height:auto;
+      margin:0 !important;
+    }
+    .tall{
+      height:140px;
+    }
+    .half{
+      width:calc(100% - 20px) !important;
+    }
+    input{
+      height:36px !important;
+    }
+  }
 }
 #Contact > a{
   border:2px solid white;
@@ -664,6 +738,7 @@ body{
     h1{
       line-height:.95em;
       font-size:3.5em;
+      margin-top:175px;
     }
     h2{
       font-size:0.93em;
@@ -682,6 +757,10 @@ body{
   color: #ffffff;
   margin: 0 20px;
   font-size: 1.1em;
+  @media (max-width:$mobile){
+    font-size:1.5em;
+    margin:25px;
+  }
   &:hover{
     .linkglitch1 {
       animation: linkglitch1 10s cubic-bezier(.25, .46, .45, .94);
@@ -859,6 +938,14 @@ body{
           padding: 3px 10px;
           cursor:pointer;
         }
+        @media(max-width:$mobile) {
+          .info{
+            font-size:1.2em;
+          }
+          a{
+            font-size:1.1em;
+          }
+        }
       }
     }
     > li > figure > img {
@@ -892,6 +979,7 @@ body{
       background:lighten($blue , 10% );
     }
     border-radius: 20px;
+    display:inline-block;
     font-size: .7em;
     margin: 4px;
     font-weight: bold;
@@ -951,4 +1039,51 @@ body{
 
 .heart{
   font-size:0.6em !important;
+}
+
+.bm-overlay{
+  width:100vw !important;
+  height:100vh !important;
+}
+
+.bm-menu-wrap{
+  width:60% !important;
+  height:100vh !important;
+  background:#242424;
+  .close-menu{
+    height:80px;
+    color:white;
+    text-align:left;
+    font-size:2.4em;
+    svg{
+      position:absolute;
+      top:20px;
+      left:30px;
+    }
+    &:focus{
+      outline:0;
+      text-align:left;
+      color:white;
+    }
+  }
+  a{
+    &.active{
+      background:$blue;
+      border-bottom: 3px solid darken($blue, 10%);
+    }
+    border-bottom: 3px solid #242424;
+    color:white;
+    background:none;
+    text-decoration: none;
+    font-size:1.4em;
+    font-weight:bold;
+    text-align:left;
+    padding:10px 0 10px 20px;
+    &:focus{
+      outline:0;
+    }
+    &:active{
+
+    }
+  }
 }
