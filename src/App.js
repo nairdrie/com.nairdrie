@@ -24,7 +24,11 @@ class App extends React.Component {
   }
 
   
-
+  checkLandscape() {
+    if(window.screenX > window.screenY) {
+      console.log("landscape");
+    }
+  }
 
   handleMenuClick = (clickedItemIndex) => {
     this.setState({ currentPage: clickedItemIndex }); 
@@ -33,7 +37,7 @@ class App extends React.Component {
 
 
   render() {
-
+    window.addEventListener("resize", this.checkLandscape);
 
     return <div className="App">
         <PersistentMenu currentPage={this.state.currentPage}  onMenuClick={(index) => {this.handleMenuClick(index);}}/>

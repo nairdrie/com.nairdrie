@@ -3,6 +3,7 @@ import logo from '../res/logo-color.svg';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { slide as Menu } from 'react-burger-menu'
+import $ from "jquery";
 
 class PersistentMenu extends React.Component {
 
@@ -13,11 +14,13 @@ class PersistentMenu extends React.Component {
 
   closeMenu () {
     console.log("test");
-    this.setState({menuOpen: false})
+    this.setState({menuOpen: false});
+    $('.bm-cross-button button').click();
   }
 
   menuClick(item) {
     this.props.onMenuClick(item)
+    $('.bm-cross-button button').click();
   }
 
     render() {
