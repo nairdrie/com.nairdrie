@@ -23,7 +23,7 @@ class Intro extends React.Component {
       return <header id="Intro" className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <h1>Nick <br className="mobile-only"/>Airdrie<div className="glitch1">Nick <br className="mobile-only"/>Airdrie</div><div className="glitch2">Nick <br className="mobile-only"/>Airdrie</div></h1>
-      <h2>Computer Engineering Student<span className="desktop-only">, </span><br className="mobile-only"/>University of Guelph</h2>
+      <h2>Computer Engineering Graduate<span className="desktop-only">, </span><br className="mobile-only"/>University of Guelph</h2>
       <div className="links">
             <span>
                  <a target="_blank" rel="noopener noreferrer" href="https://ca.linkedin.com/in/nairdrie">
@@ -43,7 +43,7 @@ class Intro extends React.Component {
                 </a>
             </span>
         </div>
-      <p className="bio">Hello world! Welcome to my portfolio. I am a fifth year Computer Engineering student studying at the University of Guelph. 
+      <p className="bio">Hello world! Welcome to my portfolio. I am a Computer Engineering graduate from the University of Guelph. 
       I designed and built this site from scratch with React. I am passionate about programming, problem solving, design and engineering.</p>
       <div className="menu">
                               <span>

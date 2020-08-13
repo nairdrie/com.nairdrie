@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 $mobile:991.98px;
 $background:#242424;
@@ -25,7 +26,7 @@ body{
 
 
 .App-header {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway,sans-serif;
   background-color: $background;
   min-height: 100vh;
   display: flex;
@@ -65,6 +66,7 @@ body{
   h2{
     margin-top:0;
     font-size: 0.7em;
+    
   }
   p.bio{
     font-size:0.7em;
@@ -1044,17 +1046,21 @@ body{
 .bm-overlay{
   width:100vw !important;
   height:100vh !important;
+  top:0;
+  left:0;
 }
 
 .bm-menu-wrap{
   width:60% !important;
   height:100vh !important;
+  top: 0;
+  left: 0;
   background:#242424;
   .close-menu{
     height:80px;
     color:white;
     text-align:left;
-    font-size:2.4em;
+    font-size:1em;
     svg{
       position:absolute;
       top:20px;
@@ -1075,7 +1081,7 @@ body{
     color:white;
     background:none;
     text-decoration: none;
-    font-size:1.4em;
+    font-size:1em;
     font-weight:bold;
     text-align:left;
     padding:10px 0 10px 20px;
@@ -1086,4 +1092,9 @@ body{
 
     }
   }
+}
+
+
+.vertical-timeline-element-subtitle {
+  font-size:0.6em;
 }

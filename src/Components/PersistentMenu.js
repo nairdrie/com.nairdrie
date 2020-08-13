@@ -35,8 +35,7 @@ class PersistentMenu extends React.Component {
                 <div className="background"></div>
                 <div className="mobile-menu-button">
                     <FontAwesomeIcon icon={faBars}  /> <h3>{pageNames[this.props.currentPage]}</h3>
-                </div>
-                <Menu isOpen={ this.state.menuOpen }>
+                    <Menu isOpen={ this.state.menuOpen }>
                     <div className="close-menu"><FontAwesomeIcon icon={faTimes}  onClick={() => this.closeMenu()} /></div>
                       <a id="intro" className={(this.props.currentPage  === 0 ? 'active menu-item' : 'menu-item')} href="#intro" onClick={() => this.menuClick(0)}>Intro</a>
                       <a id="skills" className={(this.props.currentPage  === 1 ? 'active menu-item' : 'menu-item')} href="#skills" onClick={() => this.menuClick(1)}>Skills</a>
@@ -45,6 +44,8 @@ class PersistentMenu extends React.Component {
                       <a id="resume" className={(this.props.currentPage  === 4 ? 'active menu-item' : 'menu-item')} href="#resume" onClick={() => this.menuClick(4)}>Resume</a>
                       <a id="contact" className={(this.props.currentPage  === 5 ? 'active menu-item' : 'menu-item')} href="#contact" onClick={() => this.menuClick(5)}>Contact</a>
                     </Menu>
+                </div>
+                
                 <a onClick={() => this.menuClick(0)} href="#intro"><img src={logo} className="smallLogo" alt="N" /></a>
                 <div className="menuContainer">
                 <ul id="myMenu">

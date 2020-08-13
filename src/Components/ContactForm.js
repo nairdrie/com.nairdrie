@@ -72,6 +72,11 @@ class ContactForm extends React.Component {
             console.log(res);
             
             console.log(this.state)
+            this.setState({
+              name: '', subject:'', email:'', message:'', errorField:'', submitted:true
+            });
+            var form = document.getElementById("ContactForm");
+            form.reset();
         });
 
     }
@@ -79,7 +84,7 @@ class ContactForm extends React.Component {
     render() {
       return (
         
-        <form onSubmit={this.handleSubmit}>
+        <form id="ContactForm" onSubmit={this.handleSubmit}>
           {this.state.errorField ? <p className="error">Please provide a{this.state.errorField === "Email" ? 'n' : ''}  {this.state.errorField}.</p> : null}
             <div className="row">
               <input className={"half " + (this.state.errorField === "Name" ? "error" : "")} placeholder="Name" type="text" value={this.state.name} onChange={this.handleNameChange} />
